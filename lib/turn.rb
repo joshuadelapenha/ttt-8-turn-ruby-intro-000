@@ -7,10 +7,24 @@ def input_to_index(user_input)
     user_input.to_i - 1
 end
 
-def move(board, index, character="X")
-    board[index] = character
+def valid_move?(board, index)
+  if position_taken?(board,index)
+    false
+  elsif index.between?(0, 8)
+    true
+  else
+    false
+  end
+
 end
 
+def position_taken?(board, index)
+    if board[index] == "" || board[index] == " " || board[index] == nil
+      return false
+    else
+      return true
+    end
+end
 
 def display_board(board)
     puts " #{board[0]} | #{board[1]} | #{board[2]} "
