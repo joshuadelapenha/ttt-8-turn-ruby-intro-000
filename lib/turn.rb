@@ -1,6 +1,6 @@
 
 def display_board()
-  
+
 end
 
 def valid_move?(board, index)
@@ -23,5 +23,5 @@ def position_taken?(board, index)
 end
 
 def move
-  
+
 end
